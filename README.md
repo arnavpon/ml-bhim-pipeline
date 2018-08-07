@@ -7,6 +7,7 @@ PRIOR TO PULLING THE IMAGE
 	 - The additional RAM is necessary for the MRtrix3 installation
 2) The file is large and the download process takes a while. Please ensure that your computer doesn’t fall asleep during the process.
    - If your computer falls asleep, certain large downloads may time out, causing the whole installation to fail
+3) To download the image from Docker, use the command `docker pull arnavpon/moreylab-bhim-pipeline`
 
 IMAGE USAGE (POST-INSTALLATION)
 1) Run the image with the command `docker run -it -v /my/data/directory:/pipeline/datadir ml-bhim-pipeline`
