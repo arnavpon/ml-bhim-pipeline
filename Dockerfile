@@ -15,7 +15,7 @@ RUN echo "Installing R & R packages from AFNI..." && echo && \
 	tcsh @add_rcran_ubuntu.tcsh && \
 	export PATH=/root/abin:$PATH && \
 	echo && echo "Installing R Packages..." && echo && \
-	rPkgsInstall -pkgs ALL &&
+	rPkgsInstall -pkgs ALL && \
 	echo && echo "Updating SUMA env..." && echo && \
 	suma -update_env
 
