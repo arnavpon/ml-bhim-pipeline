@@ -10,7 +10,7 @@ User Manual for Morey Lab (ML) - Bhim Pipeline
 3. To download the image from Docker, use the command `docker pull arnavpon/moreylab-bhim-pipeline`
 
 # Image Usage (Post-Installation)
-1. Run the image with the command `docker run -it -v /my/data/directory:/pipeline/datadir ml-bhim-pipeline`
+1. Run the image with the command `docker run -it -v /my/data/directory:/pipeline/datadir arnavpon/moreylab-bhim-pipeline`
 
 2. The option + argument `-v /my/data/dir:/pipeline/datadir` creates a link between a **local** directory and a location on the image (`/pipeline/datadir`). Make sure that your fMRI data is present on this local directory, and in the specified format (*see step 3*). You **MUST** specify your local data directory **AS A FULL PATH**, **not** a relative path! The pre-processing outputs will be present **inside** the folder for the subject whose data was used for pre-processing. When you terminate the container, this data *will still exist* so you can access it at your leisure.
 
