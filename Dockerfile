@@ -1,4 +1,4 @@
-# Bhim Pipeline Container 
+# Bhim Pipeline Container
 # Morey Lab
 # Automated Build - Step 3
 
@@ -14,8 +14,10 @@ RUN echo "Installing R & R packages from AFNI..." && echo && \
 	curl -O https://afni.nimh.nih.gov/pub/dist/src/scripts_src/@add_rcran_ubuntu.tcsh && \
 	tcsh @add_rcran_ubuntu.tcsh && \
 	export PATH=/root/abin:$PATH && \
-	echo && echo "Installing R Packages..." && echo && \	
-	rPkgsInstall -pkgs ALL
+	echo && echo "Installing R Packages..." && echo && \
+	rPkgsInstall -pkgs ALL &&
+	echo && echo "Updating SUMA env..." && echo && \
+	suma -update_env
 
 # (2) Copy Bhim Pipeline Files to Image
 COPY scripts /pipeline/
