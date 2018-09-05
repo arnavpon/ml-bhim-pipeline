@@ -6,7 +6,7 @@ FROM arnavpon/moreylab-afni
 LABEL description="Ubuntu 17.10 OS + MRtrix3 + AFNI. Used to pre-process fMRI data."
 LABEL maintainer="Arnav Pondicherry <arnavpon@rwjms.rutgers.edu>"
 
-# (1) Install R using AFNI
+# (1) Install R using AFNI & update to most recent AFNI version
 RUN echo "Installing R & R packages from AFNI..." && echo && \
 	export R_LIBS=$HOME/R && \
 	mkdir $R_LIBS && \
@@ -17,7 +17,8 @@ RUN echo "Installing R & R packages from AFNI..." && echo && \
 	echo && echo "Installing R Packages..." && echo && \
 	rPkgsInstall -pkgs ALL && \
 	echo && echo "Updating SUMA env..." && echo && \
-	suma -update_env
+	suma -update_env && \
+	@update.afni.binaries -defaults
 
 # (2) Copy Bhim Pipeline Files to Image
 COPY scripts /pipeline/
