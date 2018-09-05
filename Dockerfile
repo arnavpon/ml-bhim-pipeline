@@ -6,7 +6,7 @@ FROM arnavpon/moreylab-afni
 LABEL description="Ubuntu 17.10 OS + MRtrix3 + AFNI. Used to pre-process fMRI data."
 LABEL maintainer="Arnav Pondicherry <arnavpon@rwjms.rutgers.edu>"
 
-# (1) Install R using AFNI & update to most recent AFNI version
+# (1) Install R using AFNI
 RUN echo "Installing R & R packages from AFNI..." && echo && \
 	export R_LIBS=$HOME/R && \
 	mkdir $R_LIBS && \
