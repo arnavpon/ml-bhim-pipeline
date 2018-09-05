@@ -3,7 +3,7 @@
 User Manual for Morey Lab (ML) - Bhim Pipeline
 
 # Things to Note Pre-Installation
-1. Before starting the installation, visit your Docker desktop application and make sure the available RAM for Docker is set to **5 GB or more**. *The additional RAM is necessary for the MRtrix3 installation.*
+1. Before starting the installation, visit your Docker desktop application & make sure the available RAM for Docker is set to **5 GB or more**. *The additional RAM is necessary for the MRtrix3 installation.*
 
 2. The file is large and the download process takes a while. Please ensure that your computer doesn’t fall asleep during the process, because this may cause certain large downloads to time out, causing the whole installation to fail
 
