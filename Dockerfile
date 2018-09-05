@@ -17,14 +17,7 @@ RUN echo "Installing R & R packages from AFNI..." && echo && \
 	echo && echo "Installing R Packages..." && echo && \
 	rPkgsInstall -pkgs ALL && \
 	echo && echo "Updating SUMA env..." && echo && \
-	suma -update_env && \
-	@update.afni.binaries -defaults
+	suma -update_env
 
-# (2) Copy Bhim Pipeline Files to Image
-COPY scripts /pipeline/
-
-# (3) Change working directory -> /pipeline/
-WORKDIR /pipeline
-
-# (4) Start up tcsh - user can manually run `tcsh run.test subj_id`
+# (2) Start up tcsh - user can manually run `tcsh run.test subj_id`
 CMD ["tcsh"]
